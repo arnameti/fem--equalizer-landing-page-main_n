@@ -1,0 +1,89 @@
+// ############### Colors ###############
+
+:root {
+  --clr-blue: #66e2dc;
+  --clr-orange: #fa7453;
+  --clr-yellow: #ffb964;
+  --clr-white: #fcfaf9;
+  --clr-black: #191826;
+}
+
+// ############### Font ###############
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap");
+
+:root {
+  --ff-primary: "IBM Plex Sans", sans-serif;
+}
+
+// ############### Base Settings ###############
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  background: var(--clr-white);
+  padding: 0 1rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+// ############### Typography ###############
+
+body {
+  font-family: var(--ff-primary);
+  color: var(--clr-black);
+}
+
+h1 {
+  font-size: 8.8rem;
+  line-height: 8.8rem;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: 4rem;
+  line-height: 5.2rem;
+}
+
+// ############### Layout ###############
+
+.main {
+  max-width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+  // background-color: lightgrey;
+}
+
+// ############### grid-12 ###############
+
+.grid-12 {
+  display: grid;
+  grid-template-columns:
+    [container-start] 1.8fr
+    [center-start] repeat(12, [col-start] 1fr [col-end]) [center-end]
+    1.8fr [container-end];
+}
